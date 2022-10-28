@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/f859324006.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+</style>
+    <title>Document</title>
+</head>
+
+<body>
+<!-- Modal -->
+<div class="modal fade" id="results">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header fs-6">
+        <h1 class="modal-title">Результати тесту</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+      </div>
+      <div class="modal-body lead fs-6">
+      </div>
+      <div class="modal-footer fs-6">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>
+	    
+			<h1 class="programName">
+			English learner v2.0
+			</h1>
+    <div class="container">
+      
+        <div class="cardContainer rounded-5">
+            <p id="cardText"></p>
+        </div>
+        <div class="cardSwitcher">
+            <a id="switch-left" class="switch"><i class="fa-solid fa-chevron-left"></i></a>
+            <span id="currCard"></span>
+            /
+            <span id="total-number-of-cards"></span>
+            <a id="switch-right" class="switch"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      	<form class="difficultyChooser">
+    <div class="form-check-inline"  id="1" data-bs-toggle="tooltip" data-bs-title="Translate words" data-bs-placement="bottom">
+        <input type="radio" name="difficulty" value="easy" id="easy" class="form-check-input btn-success">
+        <label for="easy" class="form-check-label">Easy</label>
+    </div>
+    <div class="form-check-inline" id="2" data-bs-toggle="tooltip" data-bs-title="Translate phrasal verbs" data-bs-placement="bottom"  data-bs-trigger="hover">
+        <input type="radio" name="difficulty" value="medium" id="medium" class="form-check-input btn-warning">
+        <label for="medium" class="form-check-label"  >Medium</label>
+    </div>
+    <div class="form-check-inline" id="3" data-bs-toggle="tooltip" data-bs-title="Translate idioms" data-bs-placement="bottom"  data-bs-trigger="hover">
+        <input type="radio" name="difficulty" value="hard" id="hard" class="form-check-input btn-danger">
+        <label for="hard" class="form-check-label">Hard</label>
+    </div>
+      </form>
+      <div class="smallResults">
+        <i class="fa-regular fa-circle-check"></i><span id="corrects"></span>
+        <i class="fa-regular fa-circle-xmark"></i><span id="wrongs"></span>
+      </div>
+        <form class="answerChecker">
+                <input type="text" id="answer" name="answer" class="form-control">
+                <input type="submit" id="check" value="check" class="btn btn-outline-danger rounded-pill">
+        </form>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
